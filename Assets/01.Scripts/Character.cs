@@ -9,8 +9,13 @@ public class Character : MonoBehaviour
     [SerializeField] private int defense;
     [SerializeField] private int health;
     [SerializeField] private int crit;
-    [SerializeField] private int exp;
+
+    [Header("캐릭터 정보")]
+    [SerializeField][Range(0, 200)] private int exp;
     [SerializeField] private int maxExp;
+    [SerializeField] private int gold;
+    [SerializeField] private string playerName;
+    [SerializeField] private string description;
 
     public int Attack { get { return attack; } private set { attack = value; } }
     public int Defense { get { return defense; } private set { defense = value; } }
@@ -18,6 +23,9 @@ public class Character : MonoBehaviour
     public int Crit { get { return crit; } private set { crit = value; } }
     public int Exp { get { return exp; } private set { exp = value; } }
     public int MaxExp { get { return maxExp; } private set { maxExp = value; } }
+    public int Gold {  get { return gold; } private set { gold = value; } }
+    public string PlayerName { get { return playerName; } private set { playerName = value; } }
+    public string Description { get { return description; } private set { description = value; } }
 
 
 }

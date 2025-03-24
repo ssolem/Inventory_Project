@@ -22,6 +22,9 @@ public class UIMainMenu : UIPopUp
     public Action StatusOpen;
     public Action InventoryOpen;
 
+    private int exp;
+    private int maxExp;
+
     protected override void Start()
     {
         base.Start();
@@ -31,7 +34,9 @@ public class UIMainMenu : UIPopUp
 
         statusButton.onClick.AddListener(OnClickStatusButton);
         inventoryButton.onClick.AddListener(OnClickInventoryButton);
+
         ButtonFadeEvents();
+        SetInfo();
     }
 
     private void Update()
@@ -40,6 +45,7 @@ public class UIMainMenu : UIPopUp
         {
             OpenUI();
         }
+        SetLevel();
     }
 
     void ButtonFadeEvents()
@@ -86,5 +92,53 @@ public class UIMainMenu : UIPopUp
         sequence.Join(inventoryButton.image.DOFade(1, 0.4f));
         sequence.Join(statusTxt.DOFade(1, 0.4f));
         sequence.Join(inventoryTxt.DOFade(1, 0.4f));
+    }
+
+    private void SetInfo()
+    {
+        nameTxt.text = GameManager.Instance.Character.PlayerName;
+        descriptionTxt.text = GameManager.Instance.Character.Description;       
+    }
+
+    private void SetLevel()
+    {
+        exp = GameManager.Instance.Character.Exp;
+        maxExp = GameManager.Instance.Character.MaxExp;
+        expBar.fillAmount = (float)exp % maxExp == 0 ? 0 : (float)exp / maxExp;
+        levelTxt.text = "Lv. " + (exp / maxExp + 1).ToString();
+    }
+
+    public void SetGold()
+    {
+        int gold = GameManager.Instance.Character.Gold;
+        goldTxt.text = DevideByThousands(gold);
+    }
+
+    string DevideByThousands(int number)
+    {
+        int count = 0;
+        string result = "";
+
+        while (number > 0)
+        {
+            int unit = number % 1000;
+            number /= 1000;
+
+            if(unit > 0)
+            {
+                if(count == 0)
+                {
+                    result = unit.ToString();
+
+                }
+                else
+                {
+                    result = unit.ToString() + "," + result;
+                }
+            }
+            count++;
+        }
+
+        return result;
     }
 }

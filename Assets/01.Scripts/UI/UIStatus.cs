@@ -35,6 +35,7 @@ public class UIStatus : UIPopUp
         defenseTxt.text = GameManager.Instance.Character.Defense.ToString();
         healthTxt.text = GameManager.Instance.Character.Health.ToString();
         critTxt.text = GameManager.Instance.Character.Crit.ToString();
+        UIManager.Instance.UIMainMenu.SetGold();
     }
 
     private void OnClickBackButton()

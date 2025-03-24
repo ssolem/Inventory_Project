@@ -8,7 +8,7 @@ public class UIInventory : UIPopUp
 
     public Action inventoryBack;
 
-    void Start()
+    protected override void Start()
     {
         base.Start();
 
