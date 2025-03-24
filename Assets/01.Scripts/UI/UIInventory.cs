@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UIInventory : MonoBehaviour
+public class UIInventory : UIPopUp
 {
-    // Start is called before the first frame update
+    [SerializeField] private Button backButton;
+
+    public Action inventoryBack;
+
     void Start()
     {
-        
+        base.Start();
+
+        backButton.onClick.AddListener(OnClickBackButton);
+        UIManager.Instance.UIMainMenu.InventoryOpen += OpenUI;
+        inventoryBack += CloseUI;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnClickBackButton()
     {
-        
+        inventoryBack.Invoke();
     }
 }

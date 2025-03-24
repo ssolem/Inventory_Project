@@ -6,10 +6,10 @@ public class UIManager : Singleton<UIManager>
 {
     [SerializeField] private UIMainMenu uiMainMenu;
     [SerializeField] private UIStatus uiStatus;
-    [SerializeField] private UIInventory inventory;
+    [SerializeField] private UIInventory uiInventory;
 
     public UIMainMenu UIMainMenu { get { return uiMainMenu; } }
     public UIStatus UIStatus { get { return uiStatus; } }
-    public UIInventory Inventory { get { return inventory; } }
+    public UIInventory UIInventory { get { return uiInventory; } }
 
 }
