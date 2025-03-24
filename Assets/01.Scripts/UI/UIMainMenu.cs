@@ -1,16 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIMainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("플레이어 정보")]
+    [SerializeField] private TextMeshProUGUI nameTxt;
+    [SerializeField] private TextMeshProUGUI descriptionTxt;
+    [SerializeField] private TextMeshProUGUI goldTxt;
+    [SerializeField] private TextMeshProUGUI levelTxt;
+    [SerializeField] private Image expBar;
+
+    [Header("메인 메뉴")]
+    [SerializeField] private Button statusButton;
+    [SerializeField] private Button inventoryButton;
+
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

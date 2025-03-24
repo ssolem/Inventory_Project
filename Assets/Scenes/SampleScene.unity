@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 40460652}
   - component: {fileID: 40460651}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: StatName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uACF5\uACA9\uB825"
+  m_text: "\uCCB4\uB825"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
   m_sharedMaterial: {fileID: -2125940558160382099, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 47087005}
   - component: {fileID: 47087004}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: CritValueTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 30
+  m_text: 00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
   m_sharedMaterial: {fileID: -2125940558160382099, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 200086817}
   - component: {fileID: 200086816}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: StatName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -743,7 +743,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uACF5\uACA9\uB825"
+  m_text: "\uCE58\uBA85\uD0C0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
   m_sharedMaterial: {fileID: -2125940558160382099, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
@@ -907,7 +907,7 @@ GameObject:
   - component: {fileID: 268933316}
   - component: {fileID: 268933315}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: StatName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uACF5\uACA9\uB825"
+  m_text: "\uBC29\uC5B4\uB825"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
   m_sharedMaterial: {fileID: -2125940558160382099, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
@@ -1041,7 +1041,7 @@ GameObject:
   - component: {fileID: 427637630}
   - component: {fileID: 427637629}
   m_Layer: 5
-  m_Name: Fill
+  m_Name: ExpBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1804,6 +1804,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d38aa3ac07ab2458964f5c4dfe789f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameTxt: {fileID: 1563742386}
+  descriptionTxt: {fileID: 2037998054}
+  goldTxt: {fileID: 1055761726}
+  levelTxt: {fileID: 733551019}
+  expBar: {fileID: 427637629}
+  statusButton: {fileID: 1759751682}
+  inventoryButton: {fileID: 520403440}
 --- !u!1 &628457774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,6 +1991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676810da396067244ae11f3918929b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 1378182546}
 --- !u!4 &721617200
 Transform:
   m_ObjectHideFlags: 0
@@ -2400,6 +2408,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc8205894331c24dab9043de4921b29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackTxt: {fileID: 1190306372}
+  defenseTxt: {fileID: 882384213}
+  healthTxt: {fileID: 1933242427}
+  crtiTxt: {fileID: 47087004}
 --- !u!1 &810487316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2621,7 +2633,7 @@ GameObject:
   - component: {fileID: 846482765}
   - component: {fileID: 846482764}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: StatName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2794,7 +2806,7 @@ GameObject:
   - component: {fileID: 882384214}
   - component: {fileID: 882384213}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: DefenseValueTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2839,7 +2851,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 30
+  m_text: 00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
   m_sharedMaterial: {fileID: -2125940558160382099, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
@@ -3586,7 +3598,7 @@ GameObject:
   - component: {fileID: 1152636060}
   - component: {fileID: 1152636059}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: ExpBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3736,7 +3748,7 @@ GameObject:
   - component: {fileID: 1190306373}
   - component: {fileID: 1190306372}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: AttackValueTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3781,7 +3793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 30
+  m_text: 00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
   m_sharedMaterial: {fileID: -2125940558160382099, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
@@ -4046,6 +4058,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259052879}
   m_CullTransparentMesh: 1
+--- !u!1 &1378182545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378182547}
+  - component: {fileID: 1378182546}
+  m_Layer: 0
+  m_Name: Character
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1378182546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378182545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab904fef80d66764982c7798bd813c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 0
+  defense: 0
+  health: 0
+  crit: 0
+--- !u!4 &1378182547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378182545}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482088229
 GameObject:
   m_ObjectHideFlags: 0
@@ -5837,7 +5897,7 @@ GameObject:
   - component: {fileID: 1933242428}
   - component: {fileID: 1933242427}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: HealthValueTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5882,7 +5942,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 30
+  m_text: 00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
   m_sharedMaterial: {fileID: -2125940558160382099, guid: 61caf14315ba8ce4d88b5face549e6fd, type: 2}
@@ -6404,3 +6464,4 @@ SceneRoots:
   - {fileID: 1706934822}
   - {fileID: 721617200}
   - {fileID: 586945426}
+  - {fileID: 1378182547}
