@@ -1384,7 +1384,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5257a1781286e274f9b4b9d8a4577602, type: 2}
   slotPrefab: {fileID: 6608317215861191845, guid: a1b5e8db388f78f4993c8160159ca67f, type: 3}
   slotParent: {fileID: 1663474268}
-  scrollRect: {fileID: 514740448}
   slots: []
 --- !u!1 &514740446
 GameObject:

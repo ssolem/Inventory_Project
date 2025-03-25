@@ -104,7 +104,7 @@ public class UIMainMenu : UIPopUp
     {
         exp = GameManager.Instance.Character.Exp;
         maxExp = GameManager.Instance.Character.MaxExp;
-        expBar.fillAmount = (float)exp % maxExp == 0 ? 0 : (float)exp / maxExp;
+        expBar.fillAmount = exp % maxExp == 0 ? 0 : (exp - (exp / maxExp) * maxExp) / (float)maxExp;
         levelTxt.text = "Lv. " + (exp / maxExp + 1).ToString();
     }
 

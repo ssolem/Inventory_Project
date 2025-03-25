@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -17,6 +16,10 @@ public class Character : MonoBehaviour
     [SerializeField] private string playerName;
     [SerializeField] private string description;
 
+    private ItemData equipData;
+    public Action Equip;
+    public Action UnEquip; 
+
     public int Attack { get { return attack; } private set { attack = value; } }
     public int Defense { get { return defense; } private set { defense = value; } }
     public int Health {  get { return health; } private set { health = value; } }
@@ -27,5 +30,31 @@ public class Character : MonoBehaviour
     public string PlayerName { get { return playerName; } private set { playerName = value; } }
     public string Description { get { return description; } private set { description = value; } }
 
+    private void Start()
+    {
+        Equip += OnEquip;
+        UnEquip += OnUnEquip;
+    }
+
+    void OnEquip()
+    {
+        attack += equipData.Attack;
+        defense += equipData.Defense;
+        health += equipData.Health;
+        crit += equipData.Crit;
+    }
+
+    void OnUnEquip()
+    {
+        attack -= equipData.Attack;
+        defense -= equipData.Defense;
+        health -= equipData.Health;
+        crit -= equipData.Crit;
+    }
+
+    public void GetEquipData(ItemData data)
+    {
+        equipData = data;
+    }
 
 }
